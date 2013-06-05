@@ -7,18 +7,18 @@ Supports TCP in proxy mode, HTTP and Websocket in router mode.
 
 Installation
 ------
-`npm install npr`
+`sudo npm install npr -g`
 
 Startup
 ------
 * Start the proxy server with default configuration 'proxy.json':  
-`node npr.js`
+`npr`
 
 * Start the proxy server with selected configuration 'google.json':  
-`node npr.js google.json`
+`npr google.json`
 
 * Start the proxy server with multiple configurations 'google.json ms.json':  
-`node npr.js google.json ms.json`
+`npr google.json ms.json`
 
 Proxy mode
 ------

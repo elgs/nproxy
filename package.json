@@ -1,8 +1,11 @@
 {
   "name": "npr",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A proxy server written in nodejs, supporting TCP in proxy mode, HTTP and Websocket in router mode.",
-  "main": "npr.js",
+  "main": "npr",
+  "bin": {
+    "npr": "./bin/npr"
+  },
   "scripts": {
     "test": "node npr.js"
   },
