@@ -1,6 +1,6 @@
 {
   "name": "npr",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A proxy server written in nodejs, supporting TCP in proxy mode, HTTP and Websocket in router mode.",
   "main": "npr",
   "bin": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elgs/npr.git"
+    "url": "https://github.com/elgs/nproxy.git"
   },
   "keywords": [
     "proxy",
@@ -24,6 +24,6 @@
   "readmeFilename": "README.md",
   "gitHead": "77547ccab3f2304dd49c8e67813469855815c750",
   "bugs": {
-    "url": "https://github.com/elgs/npr/issues"
+    "url": "https://github.com/elgs/nproxy/issues"
   }
 }
