@@ -62,4 +62,4 @@ A configuration looks like this:
 }
 ```
 means that:  
-If multiple host names / domain names are bound to the proxy server, let's say `hostname_a` and `hostname_b`. When the clients connect to `hostname_a:4000`, they connect to `www.microsoft.com:80`, and when the clients connect to `hostname_b:4000`, they connect to `www.google.com:80`. If the clients connect to a host name which is not in the route table, `127.0.0.1:4000` from the proxy server itelf, for example, they connect to the default route `www.yahoo.com:80`.
+if multiple host names / domain names are bound to the proxy server, let's say `hostname_a` and `hostname_b`. When the clients connect to `hostname_a:4000`, they connect to `www.microsoft.com:80`, and when the clients connect to `hostname_b:4000`, they connect to `www.google.com:80`. If the clients connect to a host name which is not in the route table, `127.0.0.1:4000` from the proxy server itelf, for example, they connect to the default route `www.yahoo.com:80`.
