@@ -2,6 +2,7 @@ nproxy
 ======
 
 A nodejs proxy server.
+------
 
 Start the proxy server with default configuration 'proxy.js':
 node proxy.js
