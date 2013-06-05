@@ -58,35 +58,34 @@ var router = function(lConfig, routes) {
 }
 
 var start = function(config) {
-	fs.readFile(config, 'UTF-8', function(err, data) {
-		var config = JSON.parse(data);
-		for ( var k in config) {
-			var c = config[k];
-			var lConfig = {
-				port : c.localPort,
-				host : c.localAddr
-			};
-			var routes = {};
-			var routeConfig = c.routes;
-			if (routeConfig !== undefined && routeConfig !== null) {
-				for ( var rk in routeConfig) {
-					var r = routeConfig[rk];
-					var rConfig = {
-						port : r.dstPort,
-						host : r.dstAddr
-					};
-					routes[rk] = rConfig;
-				}
-				router(lConfig, routes);
-			} else {
+	var data = fs.readFileSync(config, 'UTF-8');
+	var config = JSON.parse(data);
+	for ( var k in config) {
+		var c = config[k];
+		var lConfig = {
+			port : c.localPort,
+			host : c.localAddr
+		};
+		var routes = {};
+		var routeConfig = c.routes;
+		if (routeConfig !== undefined && routeConfig !== null) {
+			for ( var rk in routeConfig) {
+				var r = routeConfig[rk];
 				var rConfig = {
-					port : c.dstPort,
-					host : c.dstAddr
+					port : r.dstPort,
+					host : r.dstAddr
 				};
-				proxy(lConfig, rConfig);
+				routes[rk] = rConfig;
 			}
+			router(lConfig, routes);
+		} else {
+			var rConfig = {
+				port : c.dstPort,
+				host : c.dstAddr
+			};
+			proxy(lConfig, rConfig);
 		}
-	});
+	}
 }
 
 var args = function() {
