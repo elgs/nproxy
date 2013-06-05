@@ -14,7 +14,6 @@ A nodejs proxy server.
 `node proxy.js google.json ms.json`
 
 When a configuration looks like this:
-
 ```js
 {
   "microsoft" : {
@@ -31,3 +30,6 @@ When a configuration looks like this:
   }
 }
 ```
+
+meaning that:
+When you connect to 127.0.0.1:3000, you connect to www.microsoft.com:80, and when you connect to 127.0.0.1:2000, you connect to www.google.com:2000.
