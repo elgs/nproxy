@@ -4,7 +4,7 @@ nproxy
 A nodejs proxy server.
 ------
 
-* Start the proxy server with default configuration 'proxy.js':  
+* Start the proxy server with default configuration 'proxy.json':  
 `node proxy.js`
 
 * Start the proxy server with selected configuration 'google.json':  
