@@ -15,7 +15,7 @@ A nodejs proxy server.
 
 Proxy mode
 ------
-A configuration looks like this:
+A configuration `proxy.json` looks like this:
 ```js
 {
   "microsoft" : {
@@ -39,7 +39,7 @@ Please note that `localAddr` is not necessary, when omitted, the server will lis
 Router mode
 ------
 Router mode works only with HTTP, not even HTTPS. Proxy mode and router mode can be working together happily.
-A configuration looks like this:
+A configuration `proxy.json` looks like this:
 ```js
 {
   "google_ms" : {
