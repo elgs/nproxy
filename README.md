@@ -31,6 +31,6 @@ A configuration looks like this:
 ```
 
 means that:  
-When you connect to 127.0.0.1:3000, you connect to www.microsoft.com:80, and when you connect to 127.0.0.1:2000, you connect to www.google.com:80.
+when you connect to 127.0.0.1:3000, you connect to www.microsoft.com:80, and when you connect to 127.0.0.1:2000, you connect to www.google.com:80.
 
 Please note that `localAddr` is not necessary, when omitted, the server will listen on all network interfaces.
