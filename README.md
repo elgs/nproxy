@@ -7,7 +7,7 @@ Supports TCP in proxy mode, HTTP and Websocket in router mode.
 
 Installation
 ------
-`npm install npr -g`
+`npm install npr`
 
 Startup
 ------
