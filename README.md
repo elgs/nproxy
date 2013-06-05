@@ -32,7 +32,7 @@ A configuration looks like this:
 }
 ```
 means that:  
-when the clients connect to 127.0.0.1:3000, they connect to `www.microsoft.com:80`, and when the clients connect to 127.0.0.1:2000, they connect to `www.google.com:80`.
+when the clients connect to 127.0.0.1:3000, they connect to `www.microsoft.com:80`, and when the clients connect to `127.0.0.1:2000`, they connect to `www.google.com:80`.
 
 Please note that `localAddr` is not necessary, when omitted, the server will listen on all network interfaces.
 
@@ -61,5 +61,5 @@ A configuration looks like this:
   }
 }
 ```
-means that:
-If multiple host names/domain names are bound to the proxy server, let's say `hostname_a` and `hostname_b`. When the clients connect to `hostname_a:4000`, they connect to `www.microsoft.com:80`, and when the clients connect to 'hostname_b:4000', they connect to `www.google.com:80`, and when the clients connect to a hostn ame which is not in the route table, for example, connecting from the same server to `127.0.0.1:4000`, they connect to the default route `www.yahoo.com:80`.
+means that:  
+If multiple host names / domain names are bound to the proxy server, let's say `hostname_a` and `hostname_b`. When the clients connect to `hostname_a:4000`, they connect to `www.microsoft.com:80`, and when the clients connect to `hostname_b:4000`, they connect to `www.google.com:80`. If the clients connect to a host name which is not in the route table, `127.0.0.1:4000` from the proxy server itelf, for example, they connect to the default route `www.yahoo.com:80`.
