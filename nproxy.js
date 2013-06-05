@@ -49,7 +49,6 @@ var router = function(lConfig, routes) {
                   break;
                }
             }
-
          } else {
             socket.peerClient.write(data);
          }
