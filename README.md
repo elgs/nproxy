@@ -1,17 +1,17 @@
-nproxy
+npr
 ======
 
 A nodejs proxy server.
 ------
 
 * Start the proxy server with default configuration 'proxy.json':  
-`node nproxy.js`
+`node npr.js`
 
 * Start the proxy server with selected configuration 'google.json':  
-`node nproxy.js google.json`
+`node npr.js google.json`
 
 * Start the proxy server with multiple configurations 'google.json ms.json':  
-`node nproxy.js google.json ms.json`
+`node npr.js google.json ms.json`
 
 Proxy mode
 ------
