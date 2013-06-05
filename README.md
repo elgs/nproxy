@@ -3,6 +3,7 @@ npr
 
 A nodejs proxy server.
 ------
+Supports TCP in proxy mode, HTTP and Websocket in router mode.
 
 Installation
 ------
