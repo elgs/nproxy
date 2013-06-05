@@ -1,7 +1,7 @@
 {
   "name": "npr",
-  "version": "1.0.0",
-  "description": "A proxy server written by nodejs.",
+  "version": "1.0.1",
+  "description": "A proxy server written in nodejs.",
   "main": "npr.js",
   "scripts": {
     "test": "node npr.js"

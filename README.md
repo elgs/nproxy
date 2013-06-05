@@ -4,6 +4,12 @@ npr
 A nodejs proxy server.
 ------
 
+Installation
+------
+`npm install npr -g`
+
+Startup
+------
 * Start the proxy server with default configuration 'proxy.json':  
 `node npr.js`
 
