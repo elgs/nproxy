@@ -2,7 +2,6 @@
   "microsoft" : {
     "dstPort" : 80,
     "localPort" : 3000,
-    "localAddr" : "127.0.0.1",
     "dstAddr" : "www.microsoft.com"
   },
   "google" : {
