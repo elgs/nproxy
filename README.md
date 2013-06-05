@@ -13,7 +13,7 @@ A nodejs proxy server.
 * Start the proxy server with multiple configurations 'google.json ms.json':  
 `node proxy.js google.json ms.json`
 
-Aconfiguration looks like this:
+A configuration looks like this:
 ```js
 {
   "microsoft" : {
