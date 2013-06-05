@@ -1,13 +1,30 @@
 {
-  "microsoft" : {
-    "dstPort" : 80,
-    "localPort" : 3000,
-    "dstAddr" : "www.microsoft.com"
+  "google_ms" : {
+    "localPort" : 4000,
+    "routes" : {
+      "hostname_a" : {
+        "dstAddr" : "www.microsoft.com",
+        "dstPort" : 80
+      },
+      "hostname_b" : {
+        "dstAddr" : "www.google.com",
+        "dstPort" : 80
+      },
+      "127.0.0.1" : {
+        "dstAddr" : "www.yahoo.com",
+        "dstPort" : 80
+      }
+    }
   },
   "google" : {
     "dstPort" : 80,
     "localPort" : 2000,
     "localAddr" : "127.0.0.1",
     "dstAddr" : "www.google.com"
+  },
+  "microsoft" : {
+    "dstPort" : 80,
+    "localPort" : 3000,
+    "dstAddr" : "www.microsoft.com"
   }
 }

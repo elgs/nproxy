@@ -13,6 +13,8 @@ A nodejs proxy server.
 * Start the proxy server with multiple configurations 'google.json ms.json':  
 `node proxy.js google.json ms.json`
 
+Proxy mode
+------
 A configuration looks like this:
 ```js
 {
@@ -29,8 +31,35 @@ A configuration looks like this:
   }
 }
 ```
-
 means that:  
-when you connect to 127.0.0.1:3000, you connect to www.microsoft.com:80, and when you connect to 127.0.0.1:2000, you connect to www.google.com:80.
+when the clients connect to 127.0.0.1:3000, they connect to `www.microsoft.com:80`, and when the clients connect to 127.0.0.1:2000, they connect to `www.google.com:80`.
 
 Please note that `localAddr` is not necessary, when omitted, the server will listen on all network interfaces.
+
+Router mode
+------
+Router mode works only with HTTP, not even HTTPS. Proxy mode and router mode can be working together happily.
+A configuration looks like this:
+```js
+{
+  "google_ms" : {
+    "localPort" : 4000,
+    "routes" : {
+      "hostname_a" : {
+        "dstAddr" : "www.microsoft.com",
+        "dstPort" : 80
+      },
+      "hostname_b" : {
+        "dstAddr" : "www.google.com",
+        "dstPort" : 80
+      },
+      "default" : {
+        "dstAddr" : "www.yahoo.com",
+        "dstPort" : 80
+      }
+    }
+  }
+}
+```
+means that:
+If multiple host names/domain names are bound to the proxy server, let's say `hostname_a` and `hostname_b`. When the clients connect to `hostname_a:4000`, they connect to `www.microsoft.com:80`, and when the clients connect to 'hostname_b:4000', they connect to `www.google.com:80`, and when the clients connect to a hostn ame which is not in the route table, for example, connecting from the same server to `127.0.0.1:4000`, they connect to the default route `www.yahoo.com:80`.
