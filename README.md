@@ -11,18 +11,18 @@ Installation
 
 Startup
 ------
-* Start the proxy server with default configuration 'proxy.json':  
+* Start the proxy server with default configuration `npr.json`:  
 `npr`
 
-* Start the proxy server with selected configuration 'google.json':  
+* Start the proxy server with selected configuration `google.json`:  
 `npr google.json`
 
-* Start the proxy server with multiple configurations 'google.json ms.json':  
+* Start the proxy server with multiple configurations `google.json ms.json`:  
 `npr google.json ms.json`
 
 Proxy mode
 ------
-A configuration `proxy.json` looks like this:
+A configuration `npr.json` looks like this:
 ```js
 {
   "microsoft" : {
@@ -46,7 +46,7 @@ Please note that `localAddr` is not necessary, when omitted, the server will lis
 Router mode
 ------
 Router mode works only with HTTP, not even HTTPS. Proxy mode and router mode can be working together happily.
-A configuration `proxy.json` looks like this:
+A configuration `npr.json` looks like this:
 ```js
 {
   "google_ms" : {
