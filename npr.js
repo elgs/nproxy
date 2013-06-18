@@ -44,7 +44,7 @@
                      socket.peerClient = client;
                      client.write(data);
 
-                     lient.on('error', function(e) {
+                     client.on('error', function(e) {
                         socket.end();
                      });
                      socket.on('error', function(e) {
