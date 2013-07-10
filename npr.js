@@ -42,7 +42,7 @@
                             var hostData = headers[i].split(':');
                             var route = hostData[1].trim();
                             var rConfig = routes[route];
-                            if (rConfig === null) {
+                            if (rConfig === undefined || rConfig === null) {
                                 rConfig = routes['default'];
                             }
                             var client = net.connect(rConfig);
