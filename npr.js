@@ -12,10 +12,12 @@
                 client.end();
             });
             client.on('error', function (e) {
+                if(e) console.log(e);
                 socket.end();
                 client.end();
             });
             socket.on('error', function (e) {
+                if(e) console.log(e);
                 client.end();
                 socket.end();
             });
@@ -46,13 +48,19 @@
                                 rConfig = routes['default'];
                             }
                             var client = net.connect(rConfig);
+                            client.on('error', function (e) {
+                                if(e) console.log(e);
+                                client.end();
+                            });
                             socket.peerClient = client;
                             client.write(data);
                             client.on('error', function (e) {
+                                if(e) console.log(e);
                                 socket.end();
                                 client.end();
                             });
                             socket.on('error', function (e) {
+                                if(e) console.log(e);
                                 client.end();
                                 socket.end();
                             });
