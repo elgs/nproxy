@@ -7,9 +7,13 @@ Supports TCP in proxy mode, HTTP and Websocket in router mode.
 
 Installation
 ------
+* Standalone Installation (as command line utility):  
 `sudo npm install npr -g`
 
-Startup
+* Modular Installation (as a node module):  
+`sudo npm install npr`
+
+Startup (as command line utility)
 ------
 * Start the proxy server with default configuration `npr.json`:  
 `npr`
@@ -19,6 +23,42 @@ Startup
 
 * Start the proxy server with multiple configurations `google.json ms.json`:  
 `npr google.json ms.json`
+
+Use as node module
+------
+```js
+var npr = require('npr-kernel');
+
+var configProxy1 = {
+    "dstPort": 80,
+    "localPort": 3000,
+    "dstAddr": "www.microsoft.com"
+};
+
+var configProxy2 = {
+    "dstPort": 80,
+    "localPort": 2000,
+    "dstAddr": "www.google.com"
+};
+
+var configRouter = {
+    "localPort": 8000,
+    "routes": {
+        "hosta": {
+            "dstAddr": "127.0.0.1",
+            "dstPort": 10309
+        },
+        "default": {
+            "dstAddr": "127.0.0.1",
+            "dstPort": 10309
+        }
+    }
+};
+
+npr.run(configProxy1);
+npr.run(configProxy2);
+npr.run(configRouter);
+```
 
 Proxy mode
 ------
