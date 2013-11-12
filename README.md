@@ -27,7 +27,7 @@ Startup (as command line utility)
 Use as node module
 ------
 ```js
-var npr = require('npr-kernel');
+var npr = require('npr');
 
 var configProxy1 = {
     "dstPort": 80,

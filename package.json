@@ -1,29 +1,30 @@
 {
-  "name": "npr",
-  "version": "1.0.14",
-  "description": "A proxy server written in nodejs, supporting TCP in proxy mode, HTTP and Websocket in router mode.",
-  "main": "npr",
-  "bin": {
-    "npr": "./bin/npr"
-  },
-  "scripts": {
-    "test": "node npr.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/elgs/nproxy.git"
-  },
-  "keywords": [
-    "proxy",
-    "router",
-    "npr",
-    "websocket"
-  ],
-  "author": "Elgs Chen",
-  "license": "BSD",
-  "readmeFilename": "README.md",
-  "gitHead": "77547ccab3f2304dd49c8e67813469855815c750",
-  "bugs": {
-    "url": "https://github.com/elgs/nproxy/issues"
-  }
+    "name": "npr",
+    "version": "1.0.15",
+    "description": "A proxy server written in nodejs, supporting TCP in proxy mode, HTTP and Websocket in router mode.",
+    "main": "npr",
+    "bin": {
+        "npr": "./bin/npr"
+    },
+    "scripts": {
+        "test": "node npr.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/elgs/nproxy.git"
+    },
+    "main": "npr-kernel",
+    "keywords": [
+        "proxy",
+        "router",
+        "npr",
+        "websocket"
+    ],
+    "author": "Elgs Chen",
+    "license": "BSD",
+    "readmeFilename": "README.md",
+    "gitHead": "77547ccab3f2304dd49c8e67813469855815c750",
+    "bugs": {
+        "url": "https://github.com/elgs/nproxy/issues"
+    }
 }
