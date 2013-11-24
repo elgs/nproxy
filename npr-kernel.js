@@ -26,7 +26,7 @@
             socket.on('data', function (data) {
                 client.write(data);
             });
-        }).listen(lConfig.port, lConfig.port);
+        }).listen(lConfig.port, lConfig.host);
     };
 
     var router = function (lConfig, routes) {
@@ -79,7 +79,7 @@
                     socket.peerClient.write(data);
                 }
             });
-        }).listen(lConfig.port, lConfig.port);
+        }).listen(lConfig.port, lConfig.host);
     };
 
     exports.run = function (config) {

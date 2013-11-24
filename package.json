@@ -1,6 +1,6 @@
 {
     "name": "npr",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "description": "A proxy server written in nodejs, supporting TCP in proxy mode, HTTP and Websocket in router mode.",
     "main": "npr",
     "bin": {
