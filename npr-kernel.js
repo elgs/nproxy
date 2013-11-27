@@ -45,19 +45,20 @@
                             var rConfig = routes[route];
                             if (rConfig === undefined || rConfig === null) {
                                 rConfig = routes['default'];
+                                if (rConfig === undefined || rConfig === null) {
+                                    console.log("No route found.")
+                                    socket.end();
+                                    break;
+                                }
                             }
                             var client = net.connect(rConfig);
                             client.on('error', function (e) {
                                 if (e) console.log(e);
+                                socket.end()
                                 client.end();
                             });
                             socket.peerClient = client;
                             client.write(data);
-                            client.on('error', function (e) {
-                                if (e) console.log(e);
-                                socket.end();
-                                client.end();
-                            });
                             socket.on('error', function (e) {
                                 if (e) console.log(e);
                                 client.end();
