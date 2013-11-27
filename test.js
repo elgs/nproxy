@@ -17,11 +17,11 @@ var configRouter = {
     "routes": {
         "hosta": {
             "dstAddr": "127.0.0.1",
-            "dstPort": 10309
+            "dstPort": 10310
         },
         "default": {
             "dstAddr": "127.0.0.1",
-            "dstPort": 10309
+            "dstPort": 10310
         }
     }
 };
