@@ -10,7 +10,7 @@
         "dstAddr" : "www.google.com",
         "dstPort" : 80
       },
-      "127.0.0.1" : {
+      "default" : {
         "dstAddr" : "www.yahoo.com",
         "dstPort" : 80
       }
