@@ -12,8 +12,8 @@
             });
             client.on('error', function (e) {
                 if (e) console.log(e);
-                socket.end();
                 client.end();
+                socket.end();
             });
             socket.on('error', function (e) {
                 if (e) console.log(e);
@@ -54,8 +54,8 @@
                             var client = net.connect(rConfig);
                             client.on('error', function (e) {
                                 if (e) console.log(e);
-                                socket.end()
                                 client.end();
+                                socket.end()
                             });
                             socket.peerClient = client;
                             client.write(data);
