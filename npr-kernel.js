@@ -6,42 +6,56 @@
             var client = net.connect(rConfig);
             client.on('end', function () {
                 try {
-                    socket.end();
+                    socket.destroy();
                 } catch (err) {
-                    console.log(e);
+                    console.log(err);
                 }
             });
             socket.on('end', function () {
                 try {
-                    client.end();
+                    client.destroy();
                 } catch (err) {
-                    console.log(e);
+                    console.log(err);
+                }
+            });
+            client.on('close', function () {
+                try {
+                    socket.destroy();
+                } catch (err) {
+                    console.log(err);
+                }
+            });
+            socket.on('close', function () {
+                try {
+                    client.destroy();
+                } catch (err) {
+                    console.log(err);
                 }
             });
             client.on('error', function (e) {
                 if (e) console.log(e);
                 try {
-                    client.end();
+                    client.destroy();
                 } catch (err) {
-                    console.log(e);
+                    console.log(err);
                 }
                 try {
-                    socket.end();
+                    socket.destroy();
                 } catch (err) {
-                    console.log(e);
+                    console.log(err);
                 }
             });
             socket.on('error', function (e) {
                 if (e) console.log(e);
                 try {
-                    client.end();
+                    client.destroy();
                 } catch (err) {
-                    console.log(e);
+                    console.log(err);
                 }
                 try {
-                    socket.end();
+                    socket.destroy();
                 } catch (err) {
-                    console.log(e);
+                    console.log(err);
                 }
             });
             client.on('data', function (data) {
@@ -56,7 +70,7 @@
     var router = function (lConfig, routes) {
         return net.createServer(function (socket) {
             socket.on('error', function (e) {
-                socket.end();
+                socket.destroy();
             });
             socket.on('data', function (data) {
                 if (socket.peerClient === undefined || socket.peerClient === null) {
@@ -72,9 +86,9 @@
                                 if (rConfig === undefined || rConfig === null) {
                                     console.log("No route found.")
                                     try {
-                                        socket.end();
+                                        socket.destroy();
                                     } catch (err) {
-                                        console.log(e);
+                                        console.log(err);
                                     }
                                     break;
                                 }
@@ -83,14 +97,14 @@
                             client.on('error', function (e) {
                                 if (e) console.log(e);
                                 try {
-                                    client.end();
+                                    client.destroy();
                                 } catch (err) {
-                                    console.log(e);
+                                    console.log(err);
                                 }
                                 try {
-                                    socket.end();
+                                    socket.destroy();
                                 } catch (err) {
-                                    console.log(e);
+                                    console.log(err);
                                 }
                             });
                             socket.peerClient = client;
@@ -98,28 +112,42 @@
                             socket.on('error', function (e) {
                                 if (e) console.log(e);
                                 try {
-                                    client.end();
+                                    client.destroy();
                                 } catch (err) {
-                                    console.log(e);
+                                    console.log(err);
                                 }
                                 try {
-                                    socket.end();
+                                    socket.destroy();
                                 } catch (err) {
-                                    console.log(e);
+                                    console.log(err);
                                 }
                             });
                             client.on('end', function () {
                                 try {
-                                    socket.end();
+                                    socket.destroy();
                                 } catch (err) {
-                                    console.log(e);
+                                    console.log(err);
                                 }
                             });
                             socket.on('end', function () {
                                 try {
-                                    client.end();
+                                    client.destroy();
                                 } catch (err) {
-                                    console.log(e);
+                                    console.log(err);
+                                }
+                            });
+                            client.on('close', function () {
+                                try {
+                                    socket.destroy();
+                                } catch (err) {
+                                    console.log(err);
+                                }
+                            });
+                            socket.on('close', function () {
+                                try {
+                                    client.destroy();
+                                } catch (err) {
+                                    console.log(err);
                                 }
                             });
                             client.on('data', function (data) {
